@@ -1,0 +1,20 @@
+.mod-accordion {
+	padding: 0px 0 25px;
+	.item {
+		margin-bottom: 10px;
+		.btn {
+			background: $lightgrey;
+			text-align: left;
+			h5 {
+				margin: 0;
+				line-height: 50px;
+			}
+			&[aria-expanded="true"] {
+				background: $darkblue;
+				h5 {
+					color: #fff;
+				}
+			}
+		}		
+	}
+}

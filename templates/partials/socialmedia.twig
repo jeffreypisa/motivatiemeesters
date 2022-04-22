@@ -1,0 +1,20 @@
+<div class="socials">
+	{% if options.visit_facebook %}
+		<a href="{{ options.visit_facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+	{% endif %}
+	{% if options.visit_twitter %}
+		<a href="{{ options.visit_twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+	{% endif %}
+	{% if options.visit_instagram %}
+		<a href="{{ options.visit_instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+	{% endif %}
+	{% if options.visit_linkedin %}
+		<a href="{{ options.visit_linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+	{% endif %}
+	{% if options.visit_email %}
+		<a href="mailto:{{ options.visit_email }}" target="_blank"><i class="fal fa-envelope"></i></a>
+	{% endif %}
+	{% if options.visit_whatsapp %}
+		<a href="https://wa.me/{{ options.visit_whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+	{% endif %}
+</div>

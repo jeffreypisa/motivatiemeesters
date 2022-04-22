@@ -1,0 +1,82 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<section class="mod-leadblok">
+		<div class="container">
+			<div class="card card-dark">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<h1 class="text-center"> {% if posttype_current == 'cases' %} Meesterwerk {% else %} {{ posttype|capitalize }} {% endif %} </h1>
+							<p> 
+								{% if posttype_current == 'wat-ons-drijft' %}
+									{{ options.watonsdrijft_toelichting }}
+								{% else %}
+									{{ options.cases_toelichting }}
+								{% endif %}
+							</p>
+						</div>
+					</div>
+				</div>
+      </div>
+		</div>
+	</section>
+		{% if categories|length > 0 %}
+	    <section class="mod-filterblocks">
+	      <div class="container">
+	      	<div class="row">
+		      	<div class="col-md-10 offset-md-1">
+			      	<div class="row">
+			        	<div class="col-6 col-md-4 col-lg">
+			        		<a href="/{% if posttype_current == 'cases' %}meesterwerk{% else %} {{ posttype_link }}{% endif %}" class="block {% if current_category == '' %} active {% endif %}">Alle</a>
+			        	</div>
+			          {% for cat in categories %}
+			          	<div class="col-6 col-md-4 col-lg">
+			              <a href="{{ cat.link }}" class="block {% if cat.id == current_category %} active {% endif %}">{{ cat.title }}</a>
+			          	</div>
+			          {% endfor %}
+			      	</div>
+		      	</div>
+	      	</div>
+		    </div>
+	    </section>
+	  {% endif %}
+  <section>
+  	<div class="container">
+		  <div class="cards cards-archive">
+		    <div class="row justify-content-center">
+		      {% for blok in posts %}  
+		        <div class="col-md-6 col-lg-4">
+		          <div class="card-wrapper nopb">
+		            <a href="{{ blok.link }}" class="card">
+	                <div class="card-img-top" style="background-image: url({{ TimberImage(blok.thumbnail)|resize(480) }})">
+	                  <div class="content">
+	                    <div class="metadata"> 
+	                      <span class="sub">
+	                        {% if thiscat == 'student-material' %}
+	                          {% for category in blok.terms('student-category') %}
+	                            {{ category.name }}
+	                          {% endfor %}
+	                        {% elseif thiscat == 'teacher-material' %}
+	                          {% for category in blok.terms('teacher-category') %}
+	                            {{ category.name }}
+	                          {% endfor %}
+	                        {% else %}
+	                          {% for category in blok.terms('news-category') %}
+	                            {{ category.name }}
+	                          {% endfor %}
+	                        {% endif %}
+	                      </span>
+	                      <h3> {{ blok.title }} </h3>
+	                    </div>
+	                  </div>
+	                </div>
+		            </a>
+		          </div>
+		        </div>
+		      {% endfor %}
+	      </div>
+	    </div>
+  	</div>
+  </section>
+{% endblock %}

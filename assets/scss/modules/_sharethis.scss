@@ -1,0 +1,36 @@
+.mod-sharethis {
+	padding: 40px 0;
+	h3 {
+		border-top: 2px solid $orange;
+		padding-bottom: 5px;
+		padding-top: 20px;
+		margin-bottom: 15px;
+		display: inline-block;
+	}
+	a {
+		display: inline-block;
+		margin: 4px;
+		transition: 0.2s ease-in;
+		i {
+			color: $grey;
+			font-size: 32px;
+		}
+		&:hover {
+			i {
+				color: $orange;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+  .mod-sharethis {
+		padding: 60px 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mod-sharethis {
+		padding: 90px 0;
+  }
+}

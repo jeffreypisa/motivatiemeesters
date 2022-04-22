@@ -1,0 +1,51 @@
+{% block html_head_container %}
+  {% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+  <body class="{{body_class}}" data-template="base.twig">
+    {% include 'mobilemenu.twig' %}
+	  <a id="mobilemenubtn" class="btn-menu js-menu">
+	    <div class="lines">
+  		  <span></span>
+        <span></span>
+        <span></span>
+	    </div>
+    </a>
+		<header class="header d-flex align-items-center {% if fn('is_front_page') %} {% else %} on{% endif %}" >
+			{% block header %}
+			  <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+      				<div class="logo" role="banner">
+      					<a class="logo-link" href="{{site.url}}" rel="home">
+      					  <img src="{{ options.logo }}" alt="logo" width="25" height="25">
+      					</a>
+      				</div>
+            </div>
+          </div>
+        </div>
+  		{% endblock %}
+		</header>
+		<div id="content" role="main" class="content-wrapper">
+			{% block content %}
+				Sorry, no content
+			{% endblock %}
+		</div>
+		{% block footer %}
+      {% include 'footer.twig' %}
+    {% endblock %}
+    <script src="{{theme.link}}/bower_components/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-out-sine',
+        offset: 0,
+        duration: 500,
+        delay: 0
+      });
+    </script>
+	</body>
+  {{ function('wp_footer') }}
+</html>

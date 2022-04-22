@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+      <section class="mod-pageheader d-flex align-items-center" style="min-height: 500px !important;">
+      	<div class="bg" style="background-image: url( {{ options.achtergrond404 }} )"></div>
+        <div class="content w-100">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <h1 style="color: #fff"> {{ options.titel404 }} </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="text-center">
+            {% if options.tekst404 %}<h3 class="text-center"> {{ options.tekst404 }} </h3>{% endif %}
+            <a href="/" class="btn btn-primary"> {{ options.knoptekst404 }}</a>
+          </div>
+        </div>
+      </section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

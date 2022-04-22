@@ -1,0 +1,16 @@
+.socials {
+	a {
+		display: inline-block;
+		margin: 8px 16px 8px 0;
+		i {
+			color: #fff;
+			font-size: 32px;
+			transition: 0.2s ease-in;
+		}
+		&:hover {
+			i {
+				color: $orange;
+			}
+		}
+	}
+}

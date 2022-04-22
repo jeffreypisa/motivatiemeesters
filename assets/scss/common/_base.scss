@@ -1,0 +1,180 @@
+body {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  height:100%;
+  color: $darkgrey;
+  background: $lightgrey;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+  padding-top: 72px;
+}
+body.home {
+	opacity: 0;
+	padding: 0;
+}
+body.loaded {
+	opacity: 1;
+}
+
+textarea:focus,
+input:focus,
+*:focus {
+  outline: none;
+}
+.dropdown-toggle::after {
+  margin-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Bitter";
+  font-weight: 700;
+  color: $grey;
+}
+h1, .h1 {
+  font-size: 27px;
+  line-height: 31px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+h2, .h2 {
+  font-size: 23px;
+  line-height: 31px;
+  margin-bottom: 30px;
+}
+h3, .h3 {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+h4, .h4 {
+  font-size: 18px;
+  line-height: 26px;  
+  margin-bottom: 20px;
+}
+h5, .h5 {
+  font-size: 15px;
+  line-height: 22px;  
+  margin-bottom: 20px;
+}
+.lead {
+  font-size: 17px;
+  line-height: 26px;  
+  margin-bottom: 30px;
+  color: $grey;
+}
+
+p + h2, p + h3, p + h4, p + h5,
+ul + h2, ul + h3, ul + h4, ul + h5,
+ol + h2, ol + h3, ol + h4, ol + h5 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #90aab0;
+  transition: 0.2s ease-in;
+  &:hover {
+    color: $orange;
+    text-decoration: none;
+  }
+  &:active, &:focus, &:target {
+    color: $orange;
+  }
+  i {
+	  font-size: 14px;
+  }
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .container-fluid {
+    padding: 0 40px;
+  }
+  h1, .h1 {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+  h2, .h2 {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+  h3, .h3 {
+    font-size: 22px;
+    line-height: 32px;  
+  }
+  h4, .h4 {
+    font-size: 19px;
+    line-height: 24px;  
+  }
+  h5, .h5 {
+    font-size: 16px;
+    line-height: 24px;  
+    margin-bottom: 20px;
+  }
+  .lead {
+    font-size: 17px;
+    line-height: 28px;  
+    margin-bottom: 30px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .container {
+	  max-width: 960px;
+  }
+  h1, .h1 {
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+  h2, .h2 {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  h3, .h3 {
+    font-size: 22px;
+    line-height: 28px;  
+  }
+  h4, .h4 {
+    font-size: 20px;
+    line-height: 28px;  
+  }
+  h5, .h5 {
+    font-size: 17px;
+    line-height: 24px;  
+    margin-bottom: 20px;
+  }
+  .lead {
+    font-size: 25px;
+    line-height: 33px;  
+    margin-bottom: 30px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+	.container {
+	  max-width: 960px;
+  }
+}

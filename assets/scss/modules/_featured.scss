@@ -1,0 +1,30 @@
+.mod-featured {
+	min-height: 240px;
+	position: relative;
+	.bg {
+		position: absolute;
+		z-index: -9;
+		top: -120px;
+		right: 0;
+		bottom: -100px;
+		left: 0;
+		background-size: cover;
+		background-position: center center;		
+	}
+	h2 {
+		color: #fff;
+		text-transform: none;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.mod-featured {
+		min-height: 290px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.mod-featured {
+		min-height: 340px;
+	}
+}

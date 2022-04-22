@@ -1,0 +1,12 @@
+  .carousel-control-prev,
+  .carousel-control-next {
+	  border-radius: 300px;
+	  width: 36px;
+	  height: 36px;
+	  top: 50%;
+	  margin-top: -15px;
+	  i {
+		  color: $grey;
+		  font-size: 32px;
+	  }
+  }

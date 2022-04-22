@@ -1,0 +1,94 @@
+<section class="mod-content
+{{ item.locatie_tekstvlak }}"  data-aos="fade-up" data-aos-duration="800">
+  <div class="container">
+  	<div class="card">
+	    {% if (item.locatie_tekstvlak == 'links') or (item.locatie_tekstvlak == 'rechts') %}
+	      <div class="row no-gutters">
+	        <div class="col-md-6">
+		        {% if item.afbeelding %}
+		        	<div id="carousel{{ sectionno }}" class="h-100 carousel slide carousel-fade" data-ride="carousel">
+								<div class="carousel-inner h-100">
+				        	{% for p in item.afbeelding %}
+				        		{% set attachment = TimberPost(p.id) %}
+					        	<div class="carousel-item h-100{% if loop.first %} active {% endif %}">
+										  <div class="card-img-top {% if item.afbeeldingvierkant %} {% else %} h-100 {% endif %}" style="background-image: url({{TimberImage(p.id).get_src|resize(800)}})"> </div>
+					        	</div>
+								  {% endfor %}
+								</div>
+								{% if item.afbeelding|length > 1 %}
+							    <a class="carousel-control-prev" href="#carousel{{ sectionno }}" role="button" data-slide="prev">
+							      <i class="fal fa-chevron-left"></i>
+							      <span class="sr-only">Previous</span>
+							    </a>
+							    <a class="carousel-control-next" href="#carousel{{ sectionno }}" role="button" data-slide="next">
+							      <i class="fal fa-chevron-right"></i>
+							      <span class="sr-only">Next</span>
+							    </a>
+							  {% endif %}
+		        	</div>
+						{% endif %}
+	        </div>
+	        <div class="col-md-6 {% if item.locatie_tekstvlak == 'links' %} order-first {% endif %} ">
+	        	<div class="contentvlak">
+	        		{% if item.subtitel %}
+	        			<h3 class="subtitel"> {{ item.subtitel }} </h3>
+	        		{% endif %}
+		          {% if item.titel %}
+		            <h2 class="{{ item.locatie_tekstvlak }}">{{ item.titel }} <span style="font-size: 16px"> {{ item.titel_light }}</span></h2>
+		          {% endif %}
+		          {% if item.tekst %}
+		            {{ item.tekst }}
+		          {% endif %}
+		          {% if item.btn_show %}
+		            <a href="{{ item.btn_link }}" class="btn btn-outline-secondary"> {{ item.btn_label }} </a>
+		          {% endif %}
+		          {% if item.uitklap_toon %}
+		          	<div class="collapse" id="collapse{{ sectionno }}">
+							    {{ item.uitklap_content }}
+							    <a data-toggle="collapse" href="#collapse{{ sectionno }}" role="button" aria-expanded="false" aria-controls="collapse{{ sectionno }}" class="js-addreadmore">
+							    	Lees minder <i class="fal fa-chevron-up"></i>
+									</a> 
+						    </div>
+	            	<a data-toggle="collapse" href="#collapse{{ sectionno }}" role="button" aria-expanded="false" aria-controls="collapse{{ sectionno }}" class="js-removeafterclick">
+							    Lees meer <i class="fal fa-chevron-down"></i>
+							  </a> 
+	            {% endif %}
+	        	</div>
+	        </div>
+	      </div>
+	    {% else %}
+	    	<div class="card-body">
+		      <div class="row">
+		        <div class="col-md-10 offset-md-1">      
+		          {% if item.afbeelding %}
+							  <img src="{{ item.afbeelding }}" width="100">
+							{% endif %}
+	            {% if item.titel %}
+	            	<div class="text-center">
+	              	<h2 class="{{ item.locatie_tekstvlak }}">{{ item.titel }}</h2>
+	            	</div>
+	            {% endif %}
+	            {% if item.tekst %}
+	              {{ item.tekst }}
+	            {% endif %}
+	            {% if item.btn_show %}
+	              <a href="#" class="btn btn-outline-light js-scrolltonextsection"> {{ item.btn_label }} </a>
+	            {% endif %}
+	            {% if item.uitklap_toon %}
+	            	<div class="collapse" id="collapse{{ sectionno }}">
+							    {{ item.uitklap_content }}
+							    <a data-toggle="collapse" href="#collapse{{ sectionno }}" role="button" aria-expanded="false" aria-controls="collapse{{ sectionno }}" class="js-addreadmore">
+							    	Lees minder <i class="fal fa-chevron-up"></i>
+									</a>
+						    </div>
+	            	<a data-toggle="collapse" href="#collapse{{ sectionno }}" role="button" aria-expanded="false" aria-controls="collapse{{ sectionno }}" class="js-removeafterclick">
+							    Lees meer <i class="fal fa-chevron-down"></i>
+							  </a> 
+	            {% endif %}
+	          </div>
+		      </div>
+	      </div>
+	    {% endif %}
+    </div>
+  </div>
+</section>

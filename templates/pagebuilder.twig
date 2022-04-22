@@ -1,0 +1,42 @@
+{% set sectionno = '0' %}
+
+{% for item in post.get_field('blokken') %}
+
+  {% set sectionno = sectionno + '1' %}
+  
+  {% if item.acf_fc_layout == 'pageheader' %}
+		{% include 'pagebuilder/pageheader.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'accordion' %}
+		{% include 'pagebuilder/accordion.twig' %}
+			
+	{% elseif item.acf_fc_layout == 'image' %}
+		{% include 'pagebuilder/image.twig' %}
+
+	{% elseif item.acf_fc_layout == 'lead' %}
+		{% include 'pagebuilder/lead.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'leadblok' %}
+		{% include 'pagebuilder/leadblok.twig' %}
+					
+  {% elseif item.acf_fc_layout == 'content' %}
+		{% include 'pagebuilder/content.twig' %}
+
+  {% elseif item.acf_fc_layout == 'cta' %}
+		{% include 'pagebuilder/cta.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'quote' %}
+		{% include 'pagebuilder/quote.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'werkgebieden' %}
+		{% include 'pagebuilder/werkgebieden.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'blog' %}
+		{% include 'pagebuilder/blog.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'tijdlijn' %}
+		{% include 'pagebuilder/tijdlijn.twig' %}
+
+  {% endif %}
+  
+{% endfor %}

@@ -1,0 +1,53 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	
+	<div class="single content-wrapper">
+		<h1 class="d-none"> {{ post.title }} </h1>
+		<div class="post-type-{{post.post_type}} content" id="post-{{post.ID}}">
+			{% if posttype_current == 'wat-ons-drijft' %}
+				<section class="mod-leadblok">
+					<div class="container">
+						<div class="card card-dark">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-10 offset-md-1">
+										{% if post.title %} 
+											<div class="text-center">
+						          	<h1> {{ post.title }} </h1>
+											</div>
+										{% endif %} 
+					          {% if post.lead %} 
+					          	<p> {{ post.lead }} </p>
+					          {% endif %}
+									</div>
+								</div>
+							</div>
+		        </div>
+					</div>
+				</section>
+				{% if post.thumbnail %}
+					<section class="mod-featured">
+						<div class="bg" style="background-image: url({{ post.thumbnail }});"></div>
+					</section>
+				{% endif %}
+				<section class="content">
+					<div class="container">
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+				          <div class="col-md-10 offset-md-1">
+				          	<br><br>
+				            {{ post.content }}
+				            <br><br>
+				          </div>
+				        </div>
+							</div>
+						</div>
+					</div>
+				</section>
+			{% endif %}
+			{% include 'pagebuilder.twig' %}
+		</div>
+	</div><!-- /content-wrapper -->
+{% endblock %}

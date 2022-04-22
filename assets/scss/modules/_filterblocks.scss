@@ -1,0 +1,39 @@
+.mod-filterblocks {
+  text-align: center;
+  padding: 0;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  .row {
+	  margin: 0 -5px;
+	  >* {
+		 padding: 0 5px; 
+	  }
+  }
+  a {
+    background: #fff;
+    display: block;
+    color: $grey;
+    padding: 10px 0;
+    transition: 0.15s ease-in;
+    margin-bottom: 10px;
+    &.dark {
+	    color: $grey;
+	    border: 2px solid $grey;
+    }
+    &:hover, &.active, &.active:hover {
+	    background: $orange;
+	    color: #fff;
+	    text-decoration: none;
+    }
+    &.active, &.active:hover {
+	    background: $grey;
+	    color: #fff;
+	    text-decoration: none;
+    }
+    &.dark:hover {
+			background: $grey;
+			border-color: $grey;
+			color: #fff;
+    }
+  }
+}

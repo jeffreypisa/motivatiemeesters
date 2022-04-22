@@ -1,0 +1,61 @@
+<section id="footer">
+	{% if is_single %}
+		{% if (posttype_current == 'wat-ons-drijft') or (posttype_current == 'cases') %}
+			<section class="mod-sharethis bg-white">
+				<div class="container">
+					<div class="text-center" data-aos="fade-up" data-aos-duration="800">
+						<h3> {% if posttype_current == 'wat-ons-drijft' %} {{ options.watonsdrijft_delen }} {% else %} {{ options.cases_delen }} {% endif %} </h3>
+						<div class="socials">
+							{% if options.linkedin %}
+								<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ post.link }}&title=&summary=&source="><i class="fab fa-linkedin"></i></a>
+							{% endif %}
+							{% if options.email %}
+								<a href="mailto:?&subject=MotivatieMeesters&body=Ik%20denk%20dat%20je%20%3Ca%20href=%22{{ post.link|url_encode|striptags }}%22%3E%20dit%20artikel%20%3C/a%3E%20misschien%20wel%20interessant%20zult%20vinden!"><i class="fal fa-envelope"></i></a>
+							{% endif %}
+							{% if options.whatsapp %}
+								<a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text={{ post.link|url_encode|striptags }}"><i class="fab fa-whatsapp"></i></a>
+							{% endif %}
+							{% if options.facebook %}
+								<a href="https://www.facebook.com/sharer/sharer.php?u={{ post.link }}"><i class="fab fa-facebook-f"></i></a>
+							{% endif %}
+							{% if options.twitter %}
+								<a href="https://twitter.com/home?status={{ post.link }}"><i class="fab fa-twitter"></i></a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</section>
+		{% endif %}
+	{% endif %}
+	<div class="section footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<img src="{{ options.footer_logo }}">
+				</div>
+				<div class="col-lg-6">
+					<h3> {{ options.footer_titel }} </h3>
+					<p> {{ options.footer_tekst }} </p>
+				</div>
+				<div class="col-lg-3">
+					<h3> Volg ons </h3>
+					{% include 'partials/socialmedia.twig' %}
+				</div>
+			</div>
+		</div>
+	  <div class="subfooter d-flex align-items-center">
+	    <div class="container"> 
+	    	<div class="row">
+	    		<div class="col-md">
+						{{ "now"|date("Y") }} Motivatiemeesters 
+	    		</div>
+	    		<div class="col-md-auto">
+	    			<div class="footermenu">
+							{% include "footermenu.twig" with {'footermenu': footermenu.get_items} %}
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+</section>

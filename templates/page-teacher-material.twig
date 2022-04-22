@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="mod-login d-flex align-items-center" style="background-image: url({{ options.login_bg }})">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2 col-xl-6 offset-xl-3">
+					<div class="card">
+						<div class="card-body">
+							<h2> {{ options.login_titel }} </h2>
+							<p> {{ options.login_tekst }}</p>
+							<form class="password-form" action="{{ site.link }}/teacher-material" method="post">
+								<div class="row">
+									<div class="col">
+										<input class="form-control" name="post_password" id="pwbox-{{post.ID}}" type="password" placeholder="Password" size="20" maxlength="20" />
+									</div>
+									<div class="col-auto">
+										<input class="btn btn-sm btn-primary" type="submit" name="Submit" value="Submit" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

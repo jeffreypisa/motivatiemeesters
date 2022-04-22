@@ -1,0 +1,46 @@
+{
+  "name": "my-new-project",
+  "authors": [
+    "John Doe <john@doe.com> (http://johndoe.com)"
+  ],
+  "description": "CodeKit automatically generated this file. You should customize it according to: https://github.com/bower/spec/blob/master/json.md",
+  "main": [
+    "index.html",
+    "main.js"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "homepage": "https://google.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/foo/bar.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "aos": "jquery-aos#^2.3.3",
+    "slick-carousel": "slick.js#^1.8.1",
+    "sticky-kit": "^1.1.2",
+    "parallax": "paralaxJS#^2.1.3",
+    "matchHeight": "^0.7.2"
+  },
+  "resolutions": {
+    "aos": "3.0.0-beta.3"
+  }
+}

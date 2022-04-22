@@ -1,0 +1,54 @@
+<section class="mod-werkgebieden" data-aos="fade-up" data-aos-duration="800">
+	<div class="container">
+		<div class="card">
+			{% if item.uitgelichte_case %}
+      	<div id="carousel{{ sectionno }}" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+					<div class="carousel-inner">
+	        	{% for item in item.uitgelichte_case %}
+		        	<a href="{{ item.link }}"  class="carousel-item {% if loop.first %} active {% endif %}">
+								<div class="uitgelicht" style="background-image: url({{ item.thumbnail }})">
+									<div class="pa d-flex align-items-center">
+										<h2 class="h1"> {{ item.title }} </h2>
+									</div>
+								</div>
+		        	</a>
+					  {% endfor %}
+					</div>
+					{% if item.uitgelichte_case|length > 1 %}
+				    <a class="carousel-control-prev" href="#carousel{{ sectionno }}" role="button" data-slide="prev">
+				      <i class="fal fa-chevron-left"></i>
+				      <span class="sr-only">Previous</span>
+				    </a>
+				    <a class="carousel-control-next" href="#carousel{{ sectionno }}" role="button" data-slide="next">
+				      <i class="fal fa-chevron-right"></i>
+				      <span class="sr-only">Next</span>
+				    </a>
+				  {% endif %}
+      	</div>
+			{% endif %}
+			<div class="card-body text-center">
+				<div class="row">
+					<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+						{% if item.titel %}
+							<h2> {{ item.titel }}</h2>
+						{% endif %}
+						{% if item.tekst %}
+							<p> {{ item.tekst }} </p>
+						{% endif %}
+					</div>
+				</div>
+				{% if categories|length > 0 %}
+			    <div class="mod-filterblocks">
+		      	<div class="row">
+		          {% for cat in categories %}
+		          	<div class="col-6 col-md-4 col-lg">
+		              <a href="{{ cat.link }}" class="block dark">{{ cat.title }}</a>
+		          	</div>
+		          {% endfor %}
+			      </div>
+			    </div>
+			  {% endif %}
+			</div>
+		</div>
+	</div>
+</section>

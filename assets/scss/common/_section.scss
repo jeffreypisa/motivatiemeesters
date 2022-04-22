@@ -1,0 +1,52 @@
+section {
+  padding: 20px 0;
+  position: relative;
+  h1.bottomline, h2.bottomline, h3.bottomline, h4.bottomline {
+    position: relative;
+    margin-bottom: 60px;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -30px;
+      height: 6px;
+      background: $blue;
+      width: 70px;
+      left: 0;
+      margin-left: 0;
+      border-radius: 3px;
+    }
+    &.links {
+      &:after {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+    &.midden {
+      &:after {
+        left: 50%;
+        margin-left: -35px;
+      }
+    }
+    &.rechts {
+      &:after {
+        right: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  section {
+	  padding: 40px 0;
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  section {
+	  padding: 50px 0;
+  }
+}
