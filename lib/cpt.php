@@ -41,13 +41,59 @@
       		'view_item'             => __( 'Bekijk case' ),
       		'search_items'          => __( 'Zoek case' ),
   			),
-  			'menu_icon'               => 'dashicons-portfolio',
+  			'menu_icon'               => 'dashicons-welcome-learn-more',
   			'public'                  => true,
   			'has_archive'             => true,
   			'rewrite'                 => array('slug' => 'meesterwerk'),
-  			'supports'                => array( 'title', 'thumbnail' ),
+  			'supports'                => array( 'title', 'editor', 'thumbnail' )
   		)
   	);
+    
+    register_post_type( 'expertises',
+    // CPT Options
+      array(
+        'labels' => array(
+          'name'                  => __( 'Expertises' ),
+          'singular_name'         => __( 'Expertise' ),
+          'all_items'             => __( 'Alle expertises' ),
+          'add_new_item'          => __( 'Nieuwe expertise toevoegen' ),
+          'new_item'              => __( 'Nieuwe expertise' ),
+          'add_new'               => __( 'Nieuwe expertise' ),
+          'edit_item'             => __( 'Bewerk expertise' ),
+          'update_item'           => __( 'Update expertise' ),
+          'view_item'             => __( 'Bekijk expertise' ),
+          'search_items'          => __( 'Zoek expertise' ),
+        ),
+        'menu_icon'               => 'dashicons-portfolio',
+        'public'                  => true,
+        'has_archive'             => true,
+        'rewrite'                 => array('slug' => 'expertise'),
+        'supports'                => array( 'title', 'editor', 'thumbnail' )
+      )
+    );
+    
+    register_post_type( 'aanbod',
+    // CPT Options
+      array(
+        'labels' => array(
+          'name'                  => __( 'Aanbod' ),
+          'singular_name'         => __( 'Aanbod' ),
+          'all_items'             => __( 'Alle aanbod' ),
+          'add_new_item'          => __( 'Nieuw aanbod toevoegen' ),
+          'new_item'              => __( 'Nieuw aanbod' ),
+          'add_new'               => __( 'Nieuw aanbod' ),
+          'edit_item'             => __( 'Bewerk aanbod' ),
+          'update_item'           => __( 'Update aanbod' ),
+          'view_item'             => __( 'Bekijk aanbod' ),
+          'search_items'          => __( 'Zoek aanbod' ),
+        ),
+        'menu_icon'               => 'dashicons-image-filter',
+        'public'                  => true,
+        'has_archive'             => false,
+        'rewrite'                 => array('slug' => 'aanbod'),
+        'supports'                => array( 'title', 'editor', 'thumbnail' )
+      )
+    );
   	
   	register_post_type( 'quotes',
   	// CPT Options

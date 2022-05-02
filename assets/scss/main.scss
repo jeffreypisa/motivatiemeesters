@@ -26,6 +26,8 @@ Text Domain: myproject
 @import 'common/section';
 @import 'common/carousel';
 @import 'common/cards';
+@import 'common/helpers';
+@import 'common/tease';
 @import 'common/modal';
 @import 'common/form';
 @import 'common/dropdownmenu';
@@ -35,6 +37,7 @@ Text Domain: myproject
 @import 'modules/header';
 @import 'modules/tijdlijn';
 @import 'modules/pageheader';
+@import 'modules/logos';
 @import 'modules/accordion';
 @import 'modules/werkgebieden';
 @import 'modules/image';
@@ -45,3 +48,4 @@ Text Domain: myproject
 @import 'modules/featured';
 @import 'modules/cta';
 @import 'modules/sharethis';
+@import 'modules/linkblokken';

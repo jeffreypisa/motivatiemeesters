@@ -1,4 +1,5 @@
 <section id="footer">
+	<!--
 	{% if is_single %}
 		{% if (posttype_current == 'wat-ons-drijft') or (posttype_current == 'cases') %}
 			<section class="mod-sharethis bg-white">
@@ -27,35 +28,42 @@
 			</section>
 		{% endif %}
 	{% endif %}
-	<div class="section footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<img src="{{ options.footer_logo }}">
+-->
+	<div class="section footer text-center text-md-left">
+		<div class="mainfooter">
+			<div class="container">
+				<div class="row mb-3">
+					<div class="col-lg-4">
+						<img src="{{ options.footer_logo }}">
+					</div>
 				</div>
-				<div class="col-lg-6">
-					<h3> {{ options.footer_titel }} </h3>
-					<p> {{ options.footer_tekst }} </p>
-				</div>
-				<div class="col-lg-3">
-					<h3> Volg ons </h3>
-					{% include 'partials/socialmedia.twig' %}
+				<div class="row">
+					<div class="col-md-6 col-lg-3">
+						<h4 class="text-white"> {{ options.footer_titel }} </h4>
+						{{ options.footer_tekst }}
+						{% include 'partials/socialmedia.twig' %}
+						<br><br>
+					</div>
+					<div class="col-md-6 col-lg-9">
+						{% include "footermenu.twig" with {'footermenu': menu.get_items} %}
+					</div>
+	
 				</div>
 			</div>
 		</div>
-	  <div class="subfooter d-flex align-items-center">
-	    <div class="container"> 
-	    	<div class="row">
-	    		<div class="col-md">
-						{{ "now"|date("Y") }} Motivatiemeesters 
-	    		</div>
-	    		<div class="col-md-auto">
-	    			<div class="footermenu">
-							{% include "footermenu.twig" with {'footermenu': footermenu.get_items} %}
-	    			</div>
-	    		</div>
-	    	</div>
-	    </div>
-	  </div>
+		<div class="subfooter d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-3 order-last order-md-first">
+						<img src="{{ theme.link }}/assets/images/CRKBO-gecertificeerd-1024x1024.png" class="stamp">
+					</div>
+					<div class="col-md-6 col-lg-9">
+						<div class="footermenu">
+							{% include "subfootermenu.twig" with {'subfootermenu': footermenu.get_items} %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>

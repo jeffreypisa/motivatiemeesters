@@ -15,14 +15,20 @@
 
 	{% elseif item.acf_fc_layout == 'lead' %}
 		{% include 'pagebuilder/lead.twig' %}
-		
+	
+	{% elseif item.acf_fc_layout == 'linkblokken' %}
+		{% include 'pagebuilder/linkblokken.twig' %}
+	
 	{% elseif item.acf_fc_layout == 'leadblok' %}
 		{% include 'pagebuilder/leadblok.twig' %}
-					
-  {% elseif item.acf_fc_layout == 'content' %}
+	
+	{% elseif item.acf_fc_layout == 'logos' %}
+		{% include 'pagebuilder/logos.twig' %}
+				
+	{% elseif item.acf_fc_layout == 'content' %}
 		{% include 'pagebuilder/content.twig' %}
 
-  {% elseif item.acf_fc_layout == 'cta' %}
+	{% elseif item.acf_fc_layout == 'cta' %}
 		{% include 'pagebuilder/cta.twig' %}
 	
 	{% elseif item.acf_fc_layout == 'quote' %}

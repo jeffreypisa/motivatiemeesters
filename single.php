@@ -12,8 +12,10 @@
 $context = Timber::get_context();
 $post = Timber::query_post();
 
-$postType = get_queried_object();
+$queried_object = get_queried_object();
+$postType = get_post_type_object(get_post_type($queried_object));
 $thisPostType = $postType->labels->name;
+
 $currentPostType = get_post_type();
 
 $terms = \Timber::get_terms(array('taxonomy' => 'werkgebieden', 'hide_empty' => true));
@@ -23,16 +25,23 @@ $thisPostTypeLink = get_post_type( get_the_ID() );
 
 $context['posttype'] = $thisPostType;
 $context['posttype_current'] = $currentPostType;
-$context['posttype_link'] = $thisPostTypeLink;
-
+$context['posttype_name'] = $thisPostType;
 
 $context['is_single'] = 'single';
 
 
-if((!isset($_COOKIE['teacher'])) && ( $currentPostType == 'teacher')) {
-	header("Location: " . get_site_url() . "/teacher-material");
-}
+$currentID = get_the_ID();
 
+$args_posts = array(
+    'post_type'			=> $currentPostType,
+    'posts_per_page'    => 3,
+    'orderby'           => 'rand',
+    'post__not_in'      => array($currentID)
+);
+
+$context['moreposts'] = Timber::get_posts($args_posts);
+
+    
 $context['post'] = $post;
 
 if ( post_password_required( $post->ID ) ) {

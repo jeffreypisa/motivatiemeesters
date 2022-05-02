@@ -1,0 +1,15 @@
+<a href="{{ post.link }}" class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+	<div class="front">
+		<div class="background" style="background-image: url({{ Image(post.thumbnail).src }})">
+	</div>
+	</div>
+	<div class="content">
+		<h2 class="h4 mt-0">
+			{{ post.title }}
+		</h2>
+		
+		<div class="bol">
+			<i class="fal fa-chevron-right"></i>
+		</div> 
+	</div>
+</a>

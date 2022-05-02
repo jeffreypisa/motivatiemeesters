@@ -1,6 +1,4 @@
 .mod-cta {
-	margin-top: 60px;
-	margin-bottom: -30px;
 	padding: 60px 0;
 	h2 {
 		margin-bottom: 15px;
@@ -9,6 +7,6 @@
 
 @include media-breakpoint-up(md) { 
 	.mod-cta {
-		margin-bottom: -60px;
+
 	}
 }

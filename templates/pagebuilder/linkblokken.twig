@@ -1,0 +1,61 @@
+<section class="mod-linkblokken bg-lightgrey">
+	<div class="container">
+		<div class="text-center">
+			{% if item.titel %}
+				<h2> {{ item.titel }} </h2>
+			{% endif %}
+		</div>
+		{% if item.met_witte_achtergrond %}
+			{% set wit = 'ja' %}
+		{% endif %}
+		{% if item.blok %}
+			<div class="row {% if wit == 'ja' %}g-2{% else %}g-5{% endif %}">
+				{% for item in item.blok %}
+					<div class="col-md-6 col-lg-4">
+						{% if wit == 'ja' %}
+						<div class="card bg-white mb-3 mb-md-4">
+							<div class="card-body p-4">
+								{% else %}
+								<div class="mb-5 mb-md-4">
+								{% endif %}
+								{% if item.afbeelding %}
+									<div class="image bg-cover ratio-1x1 mb-4" style="background-image: url({{ Image(item.afbeelding).url }});"></div>
+								{% endif %}
+								<div class="js-matchheight">
+									{% if item.titel %}
+										<h3 class="mb-3"> {{ item.titel }} </h3>
+									{% endif %}
+									{{ item.tekst }}
+								</div>
+								
+								<br>
+								{% if item.link %}
+									<a href="{{ item.link.url }}" class="btn btn-secondary"> {{ item.link.title }} </a>
+								{% endif %}
+								
+								<div class="social">
+									{% if item.email %}
+										<a href="{{ item.email.url }}"><i class="fal fa-envelope"></i> </a>
+									{% endif %}
+									
+									{% if item.telefoon %}
+										<a href="{{ item.telefoon.url }}"><i class="fal fa-phone"></i> </a>
+									{% endif %}
+									
+									{% if item.linkedin %}
+										<a href="{{ item.linkedin.url }}"><i class="fab fa-linkedin"></i> </a>
+									{% endif %}
+								</div>
+								
+								{% if wit == 'ja' %}
+							</div></div>
+							{% else %}
+						</div>
+						{% endif %}
+						
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+</section>

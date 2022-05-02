@@ -1,58 +1,60 @@
-<section class="mod-quote" data-aos="fade-up" data-aos-duration="800">
+<section class="mod-quote bg-lightgrey" data-aos="fade-up" data-aos-duration="800">
 	<div class="container">
 		<div class="card">
-		  <div id="quotes" class="carousel slide carousel-fade" data-ride="carousel">
-		    <div class="carousel-inner">
-		      {% for quote in item.quotes %}
-		        <div class="carousel-item {% if loop.first %} active {% endif %}">
-		          <div class="container">
-		            <div class="row eq-height">
-		              <div class="col-xl-10 offset-xl-1">
-		                <div class="quote js-matchheight">
-		                  <div data-aos="fade-in" data-aos-duration="800" data-aos-delay="{{delay}}" data-aos-easing="ease-in-sine">
-		                    <div class="row">
-		                      <div class="col-2 col-md-auto d-none d-sm-block">
-		                        {% if quote.afbeelding %}
-		                          <div class="quoteimage" style="background-image: url({{ quote.get_field('afbeelding') }})"></div>
-		                        {% else %}
-		                          <div class="quoteimage" style="background-image: url({{ options.quoteimage }})"></div>
-		                        {% endif %}
-		                      </div>
-		                      <div class="col offset-1">
-		                      	<strong>
-		                      	{% if quote.naam %} 
-		                          {{ quote.naam }}
-		                        {% endif %}
-		                        {% if quote.functie %}
-		                          - {{ quote.functie }}
-		                        {% endif %}
-		                      	</strong>
-		                        <div class="clearfix"></div>
-		                        <br>
-		                        {% if quote.quote %} 
-		                          <h2><span class="quotecon q1"> " </span> {{ quote.quote }} <span class="quotecon q2"> " </span></h2>
-		                        {% endif %}
-		                      </div>
-		                    </div>
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-		      {% endfor %}
-		    </div>
-		    {% if item.quotes|length > 1 %}
-			    <a class="carousel-control-prev" href="#quotes" role="button" data-slide="prev">
-			      <i class="fal fa-chevron-left"></i>
-			      <span class="sr-only">Previous</span>
-			    </a>
-			    <a class="carousel-control-next" href="#quotes" role="button" data-slide="next">
-			      <i class="fal fa-chevron-right"></i>
-			      <span class="sr-only">Next</span>
-			    </a>
-			  {% endif %}
-		  </div>  
+			<div id="quotes" class="carousel slide carousel-fade" data-ride="carousel">
+				<div class="carousel-inner">
+					{% for quote in item.quotes %}
+					<div class="carousel-item {% if loop.first %} active {% endif %}">
+						<div class="container">
+							<div class="row eq-height">
+								<div class="col-xl-10 offset-xl-1">
+									<div class="quote js-matchheight">
+										<div data-aos="fade-in" data-aos-duration="800" data-aos-delay="{{delay}}" data-aos-easing="ease-in-sine">
+											<div class="row">
+												<div class="col-2 col-md-auto d-none d-sm-block">
+													{% if quote.afbeelding %}
+													<div class="quoteimage" style="background-image: url({{ quote.get_field('afbeelding') }})"></div>
+													{% else %}
+													<div class="quoteimage" style="background-image: url({{ options.quoteimage }})"></div>
+													{% endif %}
+												</div>
+												<div class="col offset-1 d-flex align-items-center">
+													<div>
+														<strong>
+															{% if quote.naam %}
+															{{ quote.naam }}
+		                        							{% endif %}
+		                        							{% if quote.functie %}
+		                          							- {{ quote.functie }}
+		                        							{% endif %}
+														</strong>
+														<div class="clearfix"></div>
+	
+														{% if quote.quote %}
+														<h2><span class="quotecon q1"> " </span> {{ quote.quote }} <span class="quotecon q2"> " </span></h2>
+														{% endif %}
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				{% if item.quotes|length > 1 %}
+				<a class="carousel-control-prev" href="#quotes" role="button" data-slide="prev">
+					<i class="fal fa-chevron-left"></i>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#quotes" role="button" data-slide="next">
+					<i class="fal fa-chevron-right"></i>
+					<span class="sr-only">Next</span>
+				</a>
+				{% endif %}
+			</div>
 		</div>
 	</div>
 </section>

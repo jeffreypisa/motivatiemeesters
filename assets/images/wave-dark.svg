@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1921 294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <polygon id="path-1" points="0 0 1920.25 0 1920.25 293.174 0 293.174"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, 0.766000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M1559.08,100.638 C1075.35,100.638 1037.9,0 547.086,0 C356.552,0 160.483,46.733 0,97.848 L0,285.04 L1920,285.04 L1920,43.96 C1789.29,76.445 1663.06,100.638 1559.08,100.638" id="Fill-1" fill="#FFFFFE" mask="url(#mask-2)"></path>
+            <path d="M1559.33,108.464811 C1075.6,108.464811 1038.15,8.194 547.336,8.194 C356.802,8.194 160.733,54.7564895 0.25,105.685987 L0.25,292.194 L1920.25,292.194 L1920.25,51.9936071 C1789.54,84.360082 1663.31,108.464811 1559.33,108.464811" id="Fill-3" fill="#081f2d" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

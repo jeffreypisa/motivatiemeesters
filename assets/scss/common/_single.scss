@@ -1,16 +1,121 @@
+.single {
+	position: relative; 
+	.mod-cta {
+		h2 {
+			color: #fff;
+		}
+	}
+	.mod-more {
+		position: relative;
+		overflow: hidden;
+		padding-top: 50px !important;
+		&:before {
+			content: '';
+			background: #fff;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 360px;
+			z-index: 0;
+			position: absolute;
+		}
+		.container {
+			padding-top: 40px;
+			position: relative;
+			&:before {
+				content: '';
+				background: #fff;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				right: 0;
+				bottom: 0;
+				z-index: 0;
+				position: absolute;
+				width: calc(100vw - 60px);
+			}
+		}
+	}
+}
 .single section.content {
-  h1, h2, h3, h4, h5 {
-	  margin-bottom: 10px;
-  }
-  img {
-	  width: 100%;
-	  margin-top: 30px;
-	  margin-bottom: 10px;
-	  height: auto;
-  }
+
+	padding-top: 200px;
+
+	.card {
+		min-height: 200px;
+	}
+	
+	h5.text-uppercase {
+		font-weight: 400;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 10px;
+	}
+
+	img {
+		width: 100%;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		height: auto;
+	}
+
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 400px;
+		background-size: cover;
+		background-position: center center;
+
+	}
 }
 
 @include media-breakpoint-up(md) {
-  .single {
-  }
+	.single section.content {
+
+		padding-top: 220px;
+
+		.card {
+			min-height: 300px;
+			.card-body {
+				padding-top: 80px;
+			}
+		}
+
+		.bg {
+			height: 440px;
+		}
+	}
+	.single {
+		.mod-more {
+			.container {
+				&:before {
+					width: 800px;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.single section.content {
+		padding-top: 350px;
+
+		.card {
+			min-height: 450px;
+			.card-body {
+				padding-top: 100px;
+			}
+		}
+
+		.bg {
+			height: 700px;
+		}
+	}
 }

@@ -1,53 +1,99 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	
-	<div class="single content-wrapper">
-		<h1 class="d-none"> {{ post.title }} </h1>
-		<div class="post-type-{{post.post_type}} content" id="post-{{post.ID}}">
-			{% if posttype_current == 'wat-ons-drijft' %}
-				<section class="mod-leadblok">
-					<div class="container">
-						<div class="card card-dark">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-10 offset-md-1">
-										{% if post.title %} 
-											<div class="text-center">
-						          	<h1> {{ post.title }} </h1>
-											</div>
-										{% endif %} 
-					          {% if post.lead %} 
-					          	<p> {{ post.lead }} </p>
-					          {% endif %}
-									</div>
-								</div>
-							</div>
-		        </div>
-					</div>
-				</section>
-				{% if post.thumbnail %}
-					<section class="mod-featured">
-						<div class="bg" style="background-image: url({{ post.thumbnail }});"></div>
-					</section>
-				{% endif %}
-				<section class="content">
-					<div class="container">
-						<div class="card">
-							<div class="card-body">
-								<div class="row">
-				          <div class="col-md-10 offset-md-1">
-				          	<br><br>
-				            {{ post.content }}
-				            <br><br>
-				          </div>
-				        </div>
+
+<div class="single content-wrapper">
+	<h1 class="d-none"> {{ post.title }} </h1>
+	<div class="post-type-{{post.post_type}} content" id="post-{{post.ID}}">
+		<section class="content bg-white">
+			{% if post.thumbnail %}
+			<div class="bg" style="background-image: url({{ post.thumbnail }});"></div>
+			{% endif %}
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-10 offset-md-1">
+								<h5 class="text-uppercase">
+									{{ posttype_name }}
+								</h5>
+								{% if post.title %}
+								<h1 class="h2 mb-3 mb-md-4 mb-lg-5"> {{ post.title }} </h1>
+								{% endif %}
+								{{ post.content }}
 							</div>
 						</div>
 					</div>
-				</section>
-			{% endif %}
-			{% include 'pagebuilder.twig' %}
-		</div>
-	</div><!-- /content-wrapper -->
+				</div>
+			</div>
+		</section>
+		{% if post.cta_titel or post.cta_tekst or post.cta_link %}
+		<section class="mod-cta bg-dark text-white" data-aos="fade-up" data-aos-duration="800">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 offset-md-1 text-center">
+						{% if post.cta_titel %}
+						<h2 class="{{ post.cta_titel }}">{{ post.cta_titel }}</h2>
+						{% endif %}
+						{% if post.cta_link %}
+						<a href="{{ post.cta_link.url }}" class="btn btn-primary"> {{ post.cta_link.title }} </a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endif %}
+		<section class="mod-more bg-white bg-mm" data-aos="fade-up" data-aos-duration="800">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 offset-md-1 text-center">
+						<h2 class="">Meer {{ posttype_name|lower }} </h2>
+						<div class="row g-2 justify-content-md-center">
+							{% for post in moreposts %}
+								<div class="col-lg-4 mb-3">
+									{% include 'tease-blog.twig' %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{% if post.whitepaper_titel or post.whitepaper_tekst or post.whitepaper_link %}
+		<section class="mod-content rechts bg-mm">
+			<div class="bg-blue">
+				<div class="container">
+					<div class="row no-gutters">
+						<div class="col-md-6">
+							<div class="contentvlak" data-aos="fade-up" data-aos-duration="800">
+								{% if post.whitepaper_titel %}
+								<h2 class="rechts">{{ post.whitepaper_titel }}</h2>
+								{% endif %}
+								{% if post.whitepaper_tekst %}
+								{{ post.whitepaper_tekst }}
+							  		{% endif %}
+								<div class="clearfix"></div>
+								{% if post.whitepaper_link %}
+								<br>
+								<a href="{{ post.whitepaper_link.url }}" class="btn btn-primary"> {{ post.whitepaper_link.title }} </a>
+								{% endif %}
+							</div>
+						</div>
+						<div class="col-md-6 order-first order-md-last">
+							<div id="carousel" class="h-100 carousel slide carousel-fade" data-ride="carousel">
+								<div class="carousel-inner h-100">
+									<div class="carousel-item h-100 active ">
+										<div class="bg-cover ratio-4x3" style="background-image: url({{ Image(post.whitepaper_afbeelding).src }})"> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endif %}
+	</div>
+</div><!-- /content-wrapper -->
 {% endblock %}

@@ -1,39 +1,17 @@
+section.bg-white + section.bg-white,
+section.bg-lightgrey + section.bg-lightgrey,
+section.bg-white + section.has-bg-white,
+section.bg-lightgrey + section.has-bg-lightgrey {
+  padding-top: 0;
+}
+
 section {
   padding: 20px 0;
   position: relative;
-  h1.bottomline, h2.bottomline, h3.bottomline, h4.bottomline {
-    position: relative;
-    margin-bottom: 60px;
-    &:after {
-      position: absolute;
-      content: '';
-      bottom: -30px;
-      height: 6px;
-      background: $blue;
-      width: 70px;
-      left: 0;
-      margin-left: 0;
-      border-radius: 3px;
-    }
-    &.links {
-      &:after {
-        left: 0;
-        margin-left: 0;
-      }
-    }
-    &.midden {
-      &:after {
-        left: 50%;
-        margin-left: -35px;
-      }
-    }
-    &.rechts {
-      &:after {
-        right: 0;
-        margin-right: 0;
-      }
-    }
-  }
+}
+
+section:last-child:not(.bg-dark) {
+  padding-bottom: 200px;
 }
 
 @include media-breakpoint-up(md) {
@@ -43,6 +21,10 @@ section {
       margin-bottom: 50px;
     }
   }
+  section:last-child:not(.bg-dark) {
+    padding-bottom: 220px;
+  }
+
 }
 
 @include media-breakpoint-up(lg) {

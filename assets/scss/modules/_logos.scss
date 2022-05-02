@@ -1,0 +1,11 @@
+.mod-logos {
+	.bg-contain {
+		background-size: 150px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.mod-logos {
+		padding: 80px 0;
+	}
+}

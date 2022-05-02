@@ -242,6 +242,38 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/fonts\/Lato-Bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Lato-Bold.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/Lato-Bold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Lato-Bold.woff2",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/Lato-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Lato-Regular.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/Lato-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/Lato-Regular.woff2",
+      "oF" : 0
+    },
     "\/assets\/fonts\/light.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -313,6 +345,27 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/assets\/images\/bg-mm.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/bg-mm.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/assets\/images\/bg-mm.webp" : {
+      "ft" : 8388608,
+      "iS" : 57554,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/bg-mm.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/assets\/images\/chevron-grey.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -333,11 +386,74 @@
       "plM" : 3758088159,
       "prP" : 0
     },
+    "\/assets\/images\/CRKBO-gecertificeerd-1024x1024.png" : {
+      "ft" : 32768,
+      "iS" : 88322,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/CRKBO-gecertificeerd-1024x1024.png",
+      "oF" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/images\/motivatiemeesters-logo-dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/motivatiemeesters-logo-dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/assets\/images\/motivatiemeesters-logo-white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/motivatiemeesters-logo-white.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
     "\/assets\/images\/phone.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/images\/phone.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/assets\/images\/wave-dark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/wave-dark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/assets\/images\/wave-greylight.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/wave-greylight.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/assets\/images\/wave-white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/wave-white.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 3758088159,
@@ -505,6 +621,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/plugins\/simpleParallax.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/plugins\/simpleParallax.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/scss\/common\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -595,6 +722,21 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/assets\/scss\/common\/_helpers.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/common\/_helpers.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
     "\/assets\/scss\/common\/_modal.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -665,6 +807,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/common\/_socials.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/assets\/scss\/common\/_tease.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/common\/_tease.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -830,6 +987,36 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/modules\/_lead.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/assets\/scss\/modules\/_linkblokken.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/modules\/_linkblokken.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 1
+    },
+    "\/assets\/scss\/modules\/_logos.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/modules\/_logos.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -8371,7 +8558,7 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
+      "oA" : 2,
       "oAP" : "\/bower_components\/parallax\/deploy\/parallax.min.js",
       "oF" : 0,
       "sC" : 3,
@@ -9069,6 +9256,38 @@
       "oAP" : "\/templates\/404.twig",
       "oF" : 0
     },
+    "\/templates\/archive-aanbod.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-aanbod.twig",
+      "oF" : 0
+    },
+    "\/templates\/archive-cases.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-cases.twig",
+      "oF" : 0
+    },
+    "\/templates\/archive-expertises.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-expertises.twig",
+      "oF" : 0
+    },
+    "\/templates\/archive-wat-ons-drijft.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/archive-wat-ons-drijft.twig",
+      "oF" : 0
+    },
     "\/templates\/archive.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -9245,6 +9464,22 @@
       "oAP" : "\/templates\/pagebuilder\/leadblok.twig",
       "oF" : 0
     },
+    "\/templates\/pagebuilder\/linkblokken.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/linkblokken.twig",
+      "oF" : 0
+    },
+    "\/templates\/pagebuilder\/logos.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/pagebuilder\/logos.twig",
+      "oF" : 0
+    },
     "\/templates\/pagebuilder\/pageheader.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -9309,6 +9544,22 @@
       "oAP" : "\/templates\/subfootermenu.twig",
       "oF" : 0
     },
+    "\/templates\/tease-blog.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-blog.twig",
+      "oF" : 0
+    },
+    "\/templates\/tease-meesterwerk.twig" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/templates\/tease-meesterwerk.twig",
+      "oF" : 0
+    },
     "\/templates\/tease.twig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -9333,25 +9584,25 @@
     "\/assets\/js\/site.js" : [
       {
         "followForSyntaxChecking" : 0,
-        "linkedFileAbbreviatedPath" : "\/bower_components\/matchHeight\/dist\/jquery.matchHeight-min.js",
+        "linkedFileAbbreviatedPath" : "\/assets\/plugins\/simpleParallax.min.js",
         "position" : 0,
         "type" : 0
       },
       {
         "followForSyntaxChecking" : 0,
-        "linkedFileAbbreviatedPath" : "\/bower_components\/bootstrap\/dist\/js\/bootstrap.bundle.js",
+        "linkedFileAbbreviatedPath" : "\/bower_components\/matchHeight\/dist\/jquery.matchHeight-min.js",
         "position" : 1,
         "type" : 0
       },
       {
         "followForSyntaxChecking" : 0,
-        "linkedFileAbbreviatedPath" : "\/bower_components\/slick-carousel\/slick\/slick.js",
+        "linkedFileAbbreviatedPath" : "\/bower_components\/bootstrap\/dist\/js\/bootstrap.bundle.js",
         "position" : 2,
         "type" : 0
       },
       {
         "followForSyntaxChecking" : 0,
-        "linkedFileAbbreviatedPath" : "\/bower_components\/parallax\/deploy\/parallax.min.js",
+        "linkedFileAbbreviatedPath" : "\/bower_components\/slick-carousel\/slick\/slick.js",
         "position" : 3,
         "type" : 0
       },
@@ -9426,7 +9677,7 @@
   "projectAttributes" : {
     "creationDate" : 542547027,
     "displayValue" : "motivatiemeesters",
-    "displayValueWasSetByUser" : 0,
+    "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/bower_components\/bootstrap\/site\/docs\/4.1\/assets\/img\/favicons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },

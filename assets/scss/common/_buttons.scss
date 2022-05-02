@@ -2,106 +2,175 @@
 	0% {
 		background-position: 0% 50%
 	}
+
 	50% {
 		background-position: 100% 50%
 	}
+
 	100% {
 		background-position: 0% 50%
 	}
 }
 
-.btn, .field-wrap input[type=button] {
-  height: 40px;
-  line-height: 34px;
-  border-radius: 0;
-  padding: 0 30px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.2s ease-in-out;
-  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background: #fff;
-    opacity: 1;
-    border-color: #fff;
-  }
-  &:hover {
-    background: #fff;
-    cursor: pointer;
-		box-shadow: 0 6px 12px 0 rgba($lightgrey,0.50);
-  }
+.btn,
+.field-wrap input[type=button] {
+	height: 44px;
+	line-height: 44px;
+	border-radius: 0;
+	padding: 0 20px;
+	font-size: 20px;
+	font-weight: bold;
+	transition: 0.2s ease-in-out;
+
+	&:focus,
+	&:active,
+	&:target,
+	&:not(:disabled):not(.disabled):active {
+		color: #fff;
+		background: #fff;
+		opacity: 1;
+		border-color: #fff;
+	}
+
+	&:hover {
+		background: #fff;
+		cursor: pointer;
+	}
 }
 
 .btn.btn-sm {
 	height: 40px;
 	line-height: 40px;
 }
+
 .btn-outline-primary {
-  border-color: $darkblue;
-  border-width: 2px;
-  &:hover {
-    color: #fff;
-    background: $darkblue;
-    opacity: 1;
-    border-color: $darkblue;
-  }
+	border-color: $darkblue;
+	border-width: 2px;
+
+	&:hover {
+		color: #fff;
+		background: $darkblue;
+		opacity: 1;
+		border-color: $darkblue;
+	}
 }
 
-.btn-outline-secondary, .field-wrap input[type=button] {
-  border: 2px solid $orange;
-  color: $orange;
-  background: transparent;
-  border-width: 2px;
-  &:hover {
-    color: #fff;
-    background: $orange;
-    opacity: 1;
-    border-color: $orange;
-  }
+.btn-outline-secondary {
+	border: 2px solid $orange;
+	color: $orange;
+	background: transparent;
+	border-width: 2px;
+
+	&:hover {
+		color: #fff;
+		background: $orange;
+		opacity: 1;
+		border-color: $orange;
+	}
 }
 
 .btn-light {
-  color: $orange;
-  &:hover {
-    color: #fff;
-    background: $orange;
-    opacity: 1;
-    border-color: $orange;
-  }
+	color: $orange;
+
+	&:hover {
+		color: #fff;
+		background: $orange;
+		opacity: 1;
+		border-color: $orange;
+	}
 }
 
 .btn-outline-light {
-  border-color: #fff;
-  color: #fff;
-  &:hover {
-    color: $darkblue;
-    background: darken(#fff, 6%);
-    border-color: darken(#fff, 6%);
-    opacity: 1;
-  }
+	border-color: #fff;
+	color: #fff;
+
+	&:hover {
+		color: $darkblue;
+		background: darken(#fff, 6%);
+		border-color: darken(#fff, 6%);
+		opacity: 1;
+	}
 }
 
-.btn-primary {
-  border: 0;
-  background: $grey;
-  border-color: $grey;
-  color: #fff;
-  transition: 0.2s ease-in-out;
-  &:hover {
-    color: #fff;
-    background: $orange;
-    border-color: $orange;
-  }
-  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
-    color: #fff;
-    background: lighten($orange, 6%);
-    border-color: lighten($orange, 6%);
-  }
+.btn-primary,
+.field-wrap input[type=button] {
+	border: 0;
+	background: $orange;
+	border-color: $orange;
+	color: #fff;
+	transition: 0.2s ease-in-out;
+
+	&:hover {
+		color: $dark;
+		background: $orange;
+		border-color: $orange;
+	}
+
+	&:focus,
+	&:active,
+	&:target,
+	&:not(:disabled):not(.disabled):active {
+		color: $dark;
+		background: $orange;
+		border-color: $orange;
+	}
 }
 
-@include media-breakpoint-up(md) {
+.btn-secondary {
+	border: 0;
+	background: $green;
+	border-color: $green;
+	color: #fff;
+	transition: 0.2s ease-in-out;
 
+	&:hover {
+		color: #fff;
+		background: $orange;
+		border-color: $orange;
+	}
+
+	&:focus,
+	&:active,
+	&:target,
+	&:not(:disabled):not(.disabled):active {
+		color: #fff;
+		background: $orange;
+		border-color: $orange;
+	}
 }
 
-@include media-breakpoint-up(lg) {
+.bol {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border-radius: 100px;
+	transition: 0.15s ease-in-out;
+	opacity: 1;
+	margin: 0 auto;
+	background: $green;
+	text-align: center;
+	i {
+		color: #fff;
+		font-size: 18px;
+		line-height: 18px;
+		top: 14px;
+		position: absolute;
+		left: 14px;
+		right: 14px;
+		transition: 0.15s ease-in-out;
+	}
 
+	&:hover {
+		background: $orange;
+		border: 2px solid $orange;
+
+		i {
+			color: #fff;
+		}
+	}
 }
+
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}

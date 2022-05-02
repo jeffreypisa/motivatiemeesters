@@ -1,15 +1,15 @@
 body {
-  font-family: "Source Sans Pro";
+  font-family: "Lato";
   font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 28px;
   height:100%;
-  color: $darkgrey;
+  color: $grey;
   background: $lightgrey;
   -webkit-font-smoothing: antialiased;
   opacity: 1;
   transition: opacity 1s ease-in;
-  padding-top: 72px;
+  padding-top: 80px;
 }
 body.home {
 	opacity: 0;
@@ -17,6 +17,14 @@ body.home {
 }
 body.loaded {
 	opacity: 1;
+}
+
+.bg-blue {
+  background: $blue;
+  color: $dark !important;
+  h2 {
+    color: #fff !important;
+  }
 }
 
 textarea:focus,
@@ -28,17 +36,23 @@ input:focus,
   margin-left: 0;
 }
 
+.text-white {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $green;
+  }
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Bitter";
+  font-family: "Lato";
   font-weight: 700;
-  color: $grey;
+  color: $dark;
 }
 h1, .h1 {
-  font-size: 27px;
-  line-height: 31px;
+  font-size: 32px;
+  line-height: 40px;
   margin-bottom: 30px;
-  text-transform: uppercase;
 }
 h2, .h2 {
   font-size: 23px;
@@ -61,8 +75,8 @@ h5, .h5 {
   margin-bottom: 20px;
 }
 .lead {
-  font-size: 17px;
-  line-height: 26px;  
+  font-size: 19px;
+  line-height: 30px;  
   margin-bottom: 30px;
   color: $grey;
 }
@@ -74,15 +88,15 @@ ol + h2, ol + h3, ol + h4, ol + h5 {
   margin-bottom: 15px;
 }
 
-a {
-  color: #90aab0;
+a:not(.btn) {
+  color: $grey;
   transition: 0.2s ease-in;
   &:hover {
     color: $orange;
     text-decoration: none;
   }
   &:active, &:focus, &:target {
-    color: $orange;
+    color: lighten($orange, 10%);
   }
   i {
 	  font-size: 14px;
@@ -100,14 +114,14 @@ ul, ol {
 @include media-breakpoint-up(md) {
   body {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 28px;
   }
   .container-fluid {
     padding: 0 40px;
   }
   h1, .h1 {
-    font-size: 30px;
-    line-height: 34px;
+    font-size: 50px;
+    line-height:58px;
     margin-bottom: 30px;
   }
   h2, .h2 {
@@ -129,28 +143,31 @@ ul, ol {
     margin-bottom: 20px;
   }
   .lead {
-    font-size: 17px;
-    line-height: 28px;  
+    font-size: 20px;
+    line-height: 34px;  
     margin-bottom: 30px;
   }
 }
 
 @include media-breakpoint-up(lg) {
   body {
-    font-size: 18px;
-    line-height: 26px;
+    padding-top: 135px;
   }
-  .container {
-	  max-width: 960px;
+}
+
+@include media-breakpoint-up(xl) {
+  body {
+    font-size: 16px;
+    line-height: 28px;
   }
   h1, .h1 {
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 60px;
+    line-height: 75px;
     margin-bottom: 30px;
   }
   h2, .h2 {
     font-size: 30px;
-    line-height: 36px;
+    line-height: 45px;
     margin-bottom: 30px;
   }
   h3, .h3 {
@@ -167,14 +184,8 @@ ul, ol {
     margin-bottom: 20px;
   }
   .lead {
-    font-size: 25px;
-    line-height: 33px;  
+    font-size: 22px;
+    line-height: 36px;  
     margin-bottom: 30px;
-  }
-}
-
-@include media-breakpoint-up(xl) {
-	.container {
-	  max-width: 960px;
   }
 }

@@ -1,20 +1,18 @@
-<section class="mod-leadblok">
+<section class="mod-leadblok bg-lightgrey">
 	<div class="container">
-		<div class="card card-dark">
+		<div class="card bg-dark text-white">
 			<div class="card-body">
 				<div class="row">
 					<div class="col-sm-10 offset-sm-1">
-						{% if item.titel %} 
-							<div class="text-center">
-		          	<h1 {% if sectionno == 1 %} class="h1" {% endif %}> {{ item.titel }} </h1>
-							</div>
-						{% endif %} 
-	          {% if item.tekst %} 
-	          	<p> {{ item.tekst }} </p>
-	          {% endif %}
+						{% if item.titel %}
+						<h1 class="h2"> {{ item.titel }} </h1>
+						{% endif %}
+						{% if item.tekst %}
+						<p> {{ item.tekst }} </p>
+						{% endif %}
 					</div>
 				</div>
 			</div>
-    </div>
+		</div>
 	</div>
 </section>

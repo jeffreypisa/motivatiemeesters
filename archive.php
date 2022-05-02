@@ -43,18 +43,15 @@ if ( $currentPostType == 'cases' ) {
 	$postcatid = get_queried_object()->term_id;
 	$context['current_category'] = $postcatid;
 	$context['posttype'] = 'Cases';
-}
-if ( $currentPostType == 'wat-ons-drijft' ) {
+} else {
 	$args = array(
-	  'post_type'			  => 'wat-ons-drijft',
+	  'post_type'			  => $currentPostType,
 		'posts_per_page'  => -1,
 		'post_status' => 'publish',
 		'orderby' => 'publish_date', 
 		'order' => 'DESC'
 	);	
 	$context['posts'] = Timber::get_posts($args);
-} else {
-	$context['posts'] = Timber::get_posts();
-}
+} 
 
 Timber::render( $templates, $context );

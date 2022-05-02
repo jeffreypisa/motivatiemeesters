@@ -1,6 +1,6 @@
-<section id="scene" data-relative-input="true" class="mod-pageheader d-flex align-items-end {% if item.achtergrond %} minheight {% endif %}">
-	<div data-depth="0.6" class="bg" style="background-image: url({{ item.achtergrond }});"> </div>
-  <div data-depth="0.2" class="content w-100">
+<section id="scene" data-relative-input="true" class="mod-pageheader d-flex align-items-center {% if item.achtergrond %} minheight {% endif %}">
+	<div class="bg js-parallax" style="background-image: url({{ item.achtergrond }});"> </div>
+  <div class="content w-100">
     <div class="container">
       <div class="row">
         <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -8,13 +8,13 @@
 	        	<img src="{{ item.afbeelding }}" class="theimage">
 	        {% endif %}	
 					{% if item.titel %} 
-          	<h2 class="h1"> <i>{{ item.titel }} </i></h2>
+          	<h2 class="h1"> {{ item.titel }} </h2>
           {% endif %} 
           {% if item.tekst %} 
-          	<p class="lead"> {{ item.tekst }} </p>
+          	<p class="h2 mb-1 font-weight-bold text-white"> {{ item.tekst }} </p>
           {% endif %}
-          {% if item.btn_show %}
-            <a href="{{ item.btn_link }}" class="btn-round"> {{ item.btn_label }} </a>
+          {% if item.link %}
+            <a href="{{ item.link.url }}" class="btn-primary"> {{ item.link.title }} </a>
           {% endif %}
         </div>
       </div>

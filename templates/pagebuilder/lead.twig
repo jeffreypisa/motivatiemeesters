@@ -1,11 +1,14 @@
-<section class="mod-lead" data-aos="fade-in" data-aos-duration="800">
-  <div class="container">
-  	<div class="row">
-	  	<div class="col-md-10 offset-md-1">
-		    <span class="lead">
-		    	{{ item.lead }}
-		    </span>
-	  	</div>
-  	</div>
-  </div>
+<section class="mod-lead bg-lightgrey" data-aos="fade-in" data-aos-duration="800">
+	<div class="container">
+		<div class="row mb-3 mb-md-5">
+			<div class="col-10 offset-1 col-lg-8 offset-lg-2">
+				<div class="lead mb-3">
+					{{ item.lead }}
+				</div>
+				{% if item.link %}
+					<a href="{{ item.link.url }}" class="btn btn-primary mb-4 mb-md-3"> {{ item.link.title }} </a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
 </section>
