@@ -94,29 +94,6 @@
         'supports'                => array( 'title', 'editor', 'thumbnail' )
       )
     );
-  	
-  	register_post_type( 'quotes',
-  	// CPT Options
-  		array(
-  			'labels' => array(
-  				'name'                  => __( 'Quotes' ),
-  				'singular_name'         => __( 'Quote' ),
-      		'all_items'             => __( 'Alle quotes' ),
-      		'add_new_item'          => __( 'Nieuwe quote toevoegen' ),
-      		'new_item'              => __( 'Nieuwe quote' ),
-          'add_new'               => __( 'Nieuwe quote' ),
-      		'edit_item'             => __( 'Bewerk quote' ),
-      		'update_item'           => __( 'Update quote' ),
-      		'view_item'             => __( 'Bekijk quote' ),
-      		'search_items'          => __( 'Zoek quote' ),
-  			),
-  			'menu_icon'               => 'dashicons-format-quote',
-  			'public'                  => true,
-  			'has_archive'             => true,
-  			'rewrite'                 => array('slug' => 'quotes'),
-  			'supports'                => array( 'title' ),
-  		)
-  	);
   		
   }
   // Hooking up our function to theme setup

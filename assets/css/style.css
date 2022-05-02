@@ -8159,7 +8159,7 @@ section:first-child.mod-leadblok {
     height: 50px;
     content: '';
     background: url(../images/wave-white.svg);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom center; }
 

@@ -15,7 +15,7 @@
 	      var theoffset = 220;
       }
       $('html, body').animate({
-        scrollTop: $(href).offset().top - 220
+        scrollTop: $(href).offset().top - 30
       }, 500);
       return false;
     });
