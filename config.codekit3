@@ -25,6 +25,38 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
+    "\/acf-json\/group_5b7ae40103ec7.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_5b7ae40103ec7-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/acf-json\/group_5b74183617edc.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_5b74183617edc-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/acf-json\/group_5bc8ea5eaec98.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_5bc8ea5eaec98-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
+    "\/acf-json\/group_626ac0586d8c7.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/group_626ac0586d8c7-min.json",
+      "oF" : 0,
+      "oO" : 0,
+      "oS" : 1
+    },
     "\/android-chrome-192x192.png" : {
       "ft" : 32768,
       "iS" : 12024,
