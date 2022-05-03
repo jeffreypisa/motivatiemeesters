@@ -1,6 +1,6 @@
 <a href="{{ post.link }}" class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
 	<div class="front">
-		<div class="background" style="background-image: url({{ Image(post.thumbnail).src }})">
+		<div class="background" style="background-image: url({{ Image(post.thumbnail).src|resize(600) }})">
 	</div>
 		<div class="image" style="background-image: url({{ Image(post.logo).src }})"></div>
 	</div>
