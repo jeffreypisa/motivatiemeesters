@@ -20,7 +20,7 @@
 	padding: 0 20px;
 	font-size: 20px;
 	font-weight: bold;
-	transition: 0.2s ease-in-out;
+	transition: 0s ease-in-out;
 
 	&:focus,
 	&:active,
@@ -98,7 +98,6 @@
 	background: $orange;
 	border-color: $orange;
 	color: #fff;
-	transition: 0.2s ease-in-out;
 
 	&:hover {
 		color: $dark;
@@ -121,7 +120,6 @@
 	background: $green;
 	border-color: $green;
 	color: #fff;
-	transition: 0.2s ease-in-out;
 
 	&:hover {
 		color: #fff;
@@ -171,6 +169,10 @@
 }
 
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+	.btn {
+		transition: 0.2s ease-in-out;
+	}
+}
 
 @include media-breakpoint-up(lg) {}

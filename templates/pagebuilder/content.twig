@@ -38,7 +38,7 @@
 					{{ item.tekst }}
 		          	{% endif %}
 					  {% if item.link %}
-					<a href="{{ item.link.url }}" class="btn {% if item.achtergrond == 'bg-dark' %}btn-secondary{% else %}btn-primary{% endif %}"> {{ item.link.title }} </a>
+					<a href="{{ item.link.url }}" class="btn mb-4 mb-md-2 {% if item.achtergrond == 'bg-dark' %}btn-secondary{% else %}btn-primary{% endif %}"> {{ item.link.title }} </a>
 					{% endif %}
 				</div>
 			</div>

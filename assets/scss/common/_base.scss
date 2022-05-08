@@ -19,6 +19,10 @@ body.loaded {
 	opacity: 1;
 }
 
+#content {
+  overflow: hidden;
+}
+
 .bg-blue {
   background: $blue;
   color: $dark !important;

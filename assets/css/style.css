@@ -6382,6 +6382,9 @@ body.home {
 body.loaded {
   opacity: 1; }
 
+#content {
+  overflow: hidden; }
+
 .bg-blue {
   background: #00A3AD;
   color: #081f2d !important; }
@@ -6626,7 +6629,7 @@ ul, ol {
   padding: 0 20px;
   font-size: 20px;
   font-weight: bold;
-  transition: 0.2s ease-in-out; }
+  transition: 0s ease-in-out; }
   .btn:focus, .btn:active, .btn:target, .btn:not(:disabled):not(.disabled):active,
   .field-wrap input[type=button]:focus,
   .field-wrap input[type=button]:active,
@@ -6687,8 +6690,7 @@ ul, ol {
   border: 0;
   background: #ff8200;
   border-color: #ff8200;
-  color: #fff;
-  transition: 0.2s ease-in-out; }
+  color: #fff; }
   .btn-primary:hover,
   .field-wrap input[type=button]:hover {
     color: #081f2d;
@@ -6707,8 +6709,7 @@ ul, ol {
   border: 0;
   background: #49d48f;
   border-color: #49d48f;
-  color: #fff;
-  transition: 0.2s ease-in-out; }
+  color: #fff; }
   .btn-secondary:hover {
     color: #fff;
     background: #ff8200;
@@ -6742,6 +6743,10 @@ ul, ol {
     border: 2px solid #ff8200; }
     .bol:hover i {
       color: #fff; }
+
+@media (min-width: 768px) {
+  .btn {
+    transition: 0.2s ease-in-out; } }
 
 section.bg-white + section.bg-white,
 section.bg-lightgrey + section.bg-lightgrey,
@@ -6831,7 +6836,7 @@ section .card {
   background-position: center center; }
 
 .bg-contain {
-  background-size: contain;
+  background-size: contain !important;
   background-position: center center;
   background-repeat: no-repeat; }
 
@@ -7034,7 +7039,7 @@ section .card {
   .tease-aanbod .content {
     z-index: 3;
     transition: 0.4s ease-in-out;
-    padding: 30px 20px;
+    padding: 20px 20px 30px;
     opacity: 1;
     position: relative;
     margin-top: -60px; }
@@ -7166,7 +7171,7 @@ body.modal-open {
     bottom: calc(100% - 2px);
     left: -1px;
     right: -1px;
-    height: 120px;
+    height: 80px;
     content: '';
     background: url(../images/wave-dark.svg);
     background-size: 100%;
@@ -7179,7 +7184,7 @@ body.modal-open {
 
 .footer {
   background: #081f2d;
-  padding: 0 0 30px;
+  padding: 20px 0 30px;
   color: #fff; }
   .footer h4 {
     color: #fff;
@@ -7226,7 +7231,7 @@ body.modal-open {
 
 @media (min-width: 768px) {
   #footer:after {
-    height: 160px; }
+    height: 120px; }
   .footer {
     padding: 0 0 40px; }
     .footer img {
@@ -7243,7 +7248,9 @@ body.modal-open {
 
 @media (min-width: 992px) {
   #footer {
-    padding: 0; }
+    paddin: 0; }
+    #footer:after {
+      height: 160px; }
   .footer .stamp {
     position: absolute;
     bottom: -40px;
@@ -7581,16 +7588,16 @@ body.opensidemenu .btn-menu:hover span {
   text-align: center;
   background: rgba(0, 0, 0, 0.1);
   color: #fff;
-  padding: 30px 0 110px;
+  padding: 50px 0 90px;
   overflow: hidden;
-  height: 300px;
-  margin-bottom: -70px; }
+  height: 280px;
+  margin-bottom: -30px; }
   .mod-pageheader:after {
     position: absolute;
     bottom: -1px;
     left: 0;
     right: 0;
-    height: 120px;
+    height: 80px;
     content: '';
     background: url(../images/wave-greylight.svg);
     background-size: 100%;
@@ -7645,24 +7652,24 @@ body.opensidemenu .btn-menu:hover span {
   opacity: 1; }
 
 .loaded .mod-pageheader .scrolldown {
-  bottom: 80px;
+  bottom: 50px;
   opacity: 1; }
 
 @media (min-width: 768px) {
   .loaded .mod-pageheader .scrolldown {
-    bottom: 150px;
+    bottom: 120px;
     opacity: 1; }
   .home .mod-pageheader {
     height: 600px; }
     .home .mod-pageheader .container {
       margin-bottom: 100px; }
   .mod-pageheader {
-    padding: 40px 0 120px;
+    padding: 40px 0 60px;
     margin-bottom: -100px;
     min-height: 0;
     height: 440px; }
     .mod-pageheader:after {
-      height: 200px; }
+      height: 160px; }
     .mod-pageheader .container {
       margin-bottom: 140px; }
     .mod-pageheader .theimage {
@@ -7691,7 +7698,8 @@ body.opensidemenu .btn-menu:hover span {
       bottom: 160px; } }
 
 .mod-logos .bg-contain {
-  background-size: 150px; }
+  background-size: 150px;
+  filter: grayscale(100%); }
 
 @media (min-width: 992px) {
   .mod-logos {
@@ -8150,7 +8158,8 @@ section:first-child.mod-leadblok {
 .mod-linkblokken .image {
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3); }
+  margin-bottom: -15px !important;
+  z-index: -1; }
   .mod-linkblokken .image:after {
     position: absolute;
     bottom: -1px;
@@ -8158,7 +8167,7 @@ section:first-child.mod-leadblok {
     right: -1px;
     height: 50px;
     content: '';
-    background: url(../images/wave-white.svg);
+    background: url(../images/wave-greylight.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom center; }

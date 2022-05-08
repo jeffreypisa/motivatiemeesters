@@ -1,10 +1,10 @@
 <section class="mod-logos bg-white">
 	<div class="container">
 		{% if item.logos %}
-			<div class="row">
+			<div class="row g-2">
 				{% for logo in item.logos %}
-					<div class="col-6 col-md">
-						<div class="logo ratio-16x9 w-100 bg-contain" style="background-image: url({{ Image(logo.afbeelding).url }})">
+					<div class="col-4 col-md">
+						<div class="logo ratio-4x3 w-100 bg-contain" style="background-image: url({{ Image(logo.afbeelding).url }})">
 							
 						</div>
 					</div>
