@@ -2,50 +2,6 @@
 
 {% block content %}
 
-<!--
-<section class="mod-leadblok">
-	<div class="container">
-		<div class="card card-dark">
-			<div class="card-body">
-				<div class="row">
-					<div class="col-md-10 offset-md-1">
-						<h1 class="text-center"> {% if posttype_current == 'cases' %} Meesterwerk {% else %} {{ posttype|capitalize }} {% endif %} </h1>
-						<p>
-							{% if posttype_current == 'wat-ons-drijft' %}
-							{{ options.watonsdrijft_toelichting }}
-								{% else %}
-							{{ options.cases_toelichting }}
-								{% endif %}
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-{% if categories|length > 0 %}
-<section class="mod-filterblocks">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 offset-md-1">
-				<div class="row">
-					<div class="col-6 col-md-4 col-lg">
-						<a href="/{% if posttype_current == 'cases' %}meesterwerk{% else %} {{ posttype_link }}{% endif %}" class="block {% if current_category == '' %} active {% endif %}">Alle</a>
-					</div>
-					{% for cat in categories %}
-					<div class="col-6 col-md-4 col-lg">
-						<a href="{{ cat.link }}" class="block {% if cat.id == current_category %} active {% endif %}">{{ cat.title }}</a>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-{% endif %}
--->
-
 <section class="mod-werkgebieden bg-white">
 	<div class="container">
 		<div class="card bg-white">

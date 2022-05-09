@@ -7000,13 +7000,22 @@ section .card {
     .tease-cases:hover .content:after {
       bottom: -1px; }
 
+@media (max-width: 991.98px) {
+  .tease-cases .front {
+    opacity: 0.3; }
+  .tease-cases .content {
+    opacity: 1; }
+    .tease-cases .content:after {
+      bottom: -1px; } }
+
 .tease-wat-ons-drijft,
 .tease-expertises,
 .tease-aanbod {
   display: block;
   position: relative;
   transition: 0.4s ease-in-out;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: left; }
   .tease-wat-ons-drijft .front,
   .tease-expertises .front,
   .tease-aanbod .front {
@@ -7697,9 +7706,12 @@ body.opensidemenu .btn-menu:hover span {
     .mod-pageheader .scrolldown {
       bottom: 160px; } }
 
-.mod-logos .bg-contain {
-  background-size: 150px;
-  filter: grayscale(100%); }
+.mod-logos .logo-holder {
+  max-width: 180px;
+  margin: 0 auto; }
+  .mod-logos .logo-holder .bg-contain {
+    background-size: 150px;
+    filter: grayscale(100%); }
 
 @media (min-width: 992px) {
   .mod-logos {

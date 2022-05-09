@@ -1,7 +1,11 @@
 .mod-logos {
-	.bg-contain {
-		background-size: 150px;
-		filter: grayscale(100%);
+	.logo-holder {
+		max-width: 180px;
+		margin: 0 auto;	
+		.bg-contain {
+			background-size: 150px;
+			filter: grayscale(100%);
+		}
 	}
 }
 

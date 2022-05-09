@@ -4,8 +4,8 @@
 			<div class="row g-2">
 				{% for logo in item.logos %}
 					<div class="col-4 col-md">
-						<div class="logo ratio-4x3 w-100 bg-contain" style="background-image: url({{ Image(logo.afbeelding).url }})">
-							
+						<div class="logo-holder">
+							<div class="logo ratio-4x3 w-100 bg-contain" style="background-image: url({{ Image(logo.afbeelding).url }})"></div>
 						</div>
 					</div>
 				{% endfor %}
