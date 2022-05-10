@@ -7048,7 +7048,7 @@ section .card {
   .tease-aanbod .content {
     z-index: 3;
     transition: 0.4s ease-in-out;
-    padding: 20px 20px 30px;
+    padding: 25px 0 30px;
     opacity: 1;
     position: relative;
     margin-top: -60px; }
