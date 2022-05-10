@@ -49,11 +49,19 @@
 					<div class="col-md-10 offset-md-1 text-center">
 						<h2 class="">Meer {{ posttype_name|lower }} </h2>
 						<div class="row g-2 justify-content-md-center">
-							{% for post in moreposts %}
-								<div class="col-lg-4 mb-3">
-									{% include 'tease-blog.twig' %}
-								</div>
-							{% endfor %}
+							{% if post.meer %}
+								{% for post in post.get_field('meer') %}
+									<div class="col-lg-4 mb-3">
+										{% include 'tease-blog.twig' %}
+									</div>
+								{% endfor %}
+							{% else %}
+								{% for post in moreposts %}
+									<div class="col-lg-4 mb-3">
+										{% include 'tease-blog.twig' %}
+									</div>
+								{% endfor %}
+							{% endif %}
 						</div>
 					</div>
 				</div>
