@@ -94,6 +94,28 @@
         'supports'                => array( 'title', 'editor', 'thumbnail' )
       )
     );
+    
+    register_post_type( 'logos',
+    // CPT Options
+      array(
+        'labels' => array(
+          'name'                  => __( 'Logo' ),
+          'singular_name'         => __( 'Logo' ),
+          'all_items'             => __( 'Alle logos' ),
+          'add_new_item'          => __( 'Nieuw logo toevoegen' ),
+          'new_item'              => __( 'Nieuw logo' ),
+          'add_new'               => __( 'Nieuw logo' ),
+          'edit_item'             => __( 'Bewerk logo' ),
+          'update_item'           => __( 'Update logo' ),
+          'view_item'             => __( 'Bekijk logo' ),
+          'search_items'          => __( 'Zoek logo' ),
+        ),
+        'menu_icon'               => 'dashicons-flag',
+        'public'                  => true,
+        'has_archive'             => false,
+        'supports'                => array( 'title' )
+      )
+    );
   		
   }
   // Hooking up our function to theme setup

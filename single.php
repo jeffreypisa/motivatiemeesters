@@ -41,6 +41,15 @@ $args_posts = array(
 
 $context['moreposts'] = Timber::get_posts($args_posts);
 
+$args = array(
+    'post_type'			  => 'logos',
+    'posts_per_page'  => 3,
+    'post_status' => 'publish',
+    'orderby'        => 'rand'
+);	
+$context['logos'] = Timber::get_posts($args);
+    
+    
     
 $context['post'] = $post;
 

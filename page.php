@@ -28,7 +28,16 @@ $post = new TimberPost();
 
 $terms = \Timber::get_terms(array('taxonomy' => 'werkgebieden', 'hide_empty' => true));
 $context['categories'] = $terms;
-	
+
+$args = array(
+  'post_type'			  => 'logos',
+    'posts_per_page'  => 3,
+    'post_status' => 'publish',
+    'orderby'        => 'rand'
+);	
+$context['logos'] = Timber::get_posts($args);
+    
+    
 $context['post'] = $post;
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

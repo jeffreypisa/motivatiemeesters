@@ -824,53 +824,7 @@
                     "name": "logos",
                     "label": "Logo's",
                     "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_626aa84b68c46",
-                            "label": "Logos",
-                            "name": "logos",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_626aa86f68c4a",
-                                    "label": "Afbeelding",
-                                    "name": "afbeelding",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "preview_size": "medium",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
-                                }
-                            ]
-                        }
-                    ],
+                    "sub_fields": [],
                     "min": "",
                     "max": ""
                 }
@@ -912,5 +866,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651517232
+    "modified": 1652181660
 }
