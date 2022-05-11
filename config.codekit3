@@ -83,7 +83,7 @@
     },
     "\/android-chrome-192x192.png" : {
       "ft" : 32768,
-      "iS" : 12024,
+      "iS" : 10555,
       "oA" : 0,
       "oAP" : "\/android-chrome-192x192.png",
       "oF" : 0,
@@ -96,7 +96,7 @@
     },
     "\/android-chrome-512x512.png" : {
       "ft" : 32768,
-      "iS" : 25061,
+      "iS" : 29017,
       "oA" : 0,
       "oAP" : "\/android-chrome-512x512.png",
       "oF" : 0,
@@ -109,7 +109,7 @@
     },
     "\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 11237,
+      "iS" : 7323,
       "oA" : 0,
       "oAP" : "\/apple-touch-icon.png",
       "oF" : 0,
@@ -9049,7 +9049,7 @@
     },
     "\/favicon-16x16.png" : {
       "ft" : 32768,
-      "iS" : 3019,
+      "iS" : 1028,
       "oA" : 0,
       "oAP" : "\/favicon-16x16.png",
       "oF" : 0,
@@ -9062,7 +9062,7 @@
     },
     "\/favicon-32x32.png" : {
       "ft" : 32768,
-      "iS" : 3549,
+      "iS" : 1860,
       "oA" : 0,
       "oAP" : "\/favicon-32x32.png",
       "oF" : 0,
@@ -9187,7 +9187,7 @@
     },
     "\/mstile-150x150.png" : {
       "ft" : 32768,
-      "iS" : 7389,
+      "iS" : 7832,
       "oA" : 0,
       "oAP" : "\/mstile-150x150.png",
       "oF" : 0,
