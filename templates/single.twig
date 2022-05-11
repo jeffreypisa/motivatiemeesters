@@ -47,22 +47,38 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-10 offset-md-1 text-center">
-						<h2 class="">Meer {{ posttype_name|lower }} </h2>
-						<div class="row g-2 justify-content-md-center">
-							{% if post.meer %}
+						
+						{% if post.meer %}
+							<h2 class=""> 
+								{% if posttype_name|lower == 'aanbod' %}
+									Meesterwerken
+								{% elseif posttype_name|lower == 'expertises' %}
+									Aanbod
+								{% elseif posttype_name|lower == 'meesterwerk' %}
+									Meer meesterwerken
+								{% else %}
+									Meer {{ posttype_name|lower }}
+								{% endif %}
+							</h2>
+							<div class="row g-2 justify-content-md-center">
 								{% for post in post.get_field('meer') %}
 									<div class="col-lg-4 mb-3">
 										{% include 'tease-blog.twig' %}
 									</div>
 								{% endfor %}
-							{% else %}
+							</div>
+							
+						{% else %}
+							<h2 class="">Meer {{ posttype_name|lower }} </h2>
+							<div class="row g-2 justify-content-md-center">
 								{% for post in moreposts %}
 									<div class="col-lg-4 mb-3">
 										{% include 'tease-blog.twig' %}
 									</div>
 								{% endfor %}
-							{% endif %}
-						</div>
+							</div>
+						
+						{% endif %}
 					</div>
 				</div>
 			</div>
