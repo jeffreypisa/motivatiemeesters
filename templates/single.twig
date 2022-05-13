@@ -15,7 +15,7 @@
 						<div class="row">
 							<div class="col-md-10 offset-md-1">
 								<h5 class="text-uppercase">
-									{{ posttype_name }}
+									{% if posttype_name == 'Expertises' %}EXPERTISE{% else %}{{ posttype_name }}{% endif %}
 								</h5>
 								{% if post.title %}
 								<h1 class="h2 mb-3 mb-md-4 mb-lg-5"> {{ post.title }} </h1>
@@ -96,7 +96,7 @@
 								{% endif %}
 								{% if post.whitepaper_tekst %}
 								{{ post.whitepaper_tekst }}
-							  		{% endif %}
+									  {% endif %}
 								<div class="clearfix"></div>
 								{% if post.whitepaper_link %}
 								<br>
