@@ -8170,8 +8170,7 @@ section:first-child.mod-leadblok {
 .mod-linkblokken .image {
   position: relative;
   overflow: hidden;
-  margin-bottom: -15px !important;
-  z-index: -1; }
+  margin-bottom: -15px !important; }
   .mod-linkblokken .image:after {
     position: absolute;
     bottom: -1px;
@@ -8179,7 +8178,7 @@ section:first-child.mod-leadblok {
     right: -1px;
     height: 50px;
     content: '';
-    background: url(../images/wave-greylight.svg);
+    background: url(../images/wave-white.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom center; }

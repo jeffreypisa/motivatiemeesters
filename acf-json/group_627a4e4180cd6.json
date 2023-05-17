@@ -39,6 +39,13 @@
                 "operator": "==",
                 "value": "aanbod"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "expertises"
+            }
         ]
     ],
     "menu_order": 0,
@@ -50,5 +57,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652183045
+    "modified": 1684312783
 }

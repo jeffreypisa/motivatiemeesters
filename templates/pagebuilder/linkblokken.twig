@@ -14,12 +14,13 @@
 					<div class="col-md-6 col-lg-4">
 						{% if wit == 'ja' %}
 						<div class="card bg-white mb-3 mb-md-4">
+							
+							{% if item.afbeelding %}
+								<div class="image bg-cover ratio-4x3 mb-0" style="background-image: url({{ Image(item.afbeelding).src }});"></div>
+							{% endif %}
 							<div class="card-body p-4">
 								{% else %}
 								<div class="mb-5 mb-md-4">
-								{% endif %}
-								{% if item.afbeelding %}
-									<div class="image bg-cover ratio-1x1 mb-4" style="background-image: url({{ Image(item.afbeelding).url }});"></div>
 								{% endif %}
 								<div class="js-matchheight">
 									{% if item.titel %}
