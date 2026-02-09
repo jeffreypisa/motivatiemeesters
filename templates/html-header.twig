@@ -28,6 +28,27 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="{{theme.link}}/bower_components/aos/dist/aos.css" />
   
+  <meta name="author" content="Emonks – https://www.emonks.nl">
+   
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "WebSite",
+     "name": "{{ site.name|e('js') }}",
+     "url": "{{ site.url|e('js') }}",
+     "author": {
+       "@type": "Organization",
+       "name": "Emonks",
+       "url": "https://www.emonks.nl"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "Emonks",
+       "url": "https://www.emonks.nl"
+     }
+   }
+  </script>
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQSM1Q10P8"></script>
 <script>
